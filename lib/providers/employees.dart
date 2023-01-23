@@ -30,7 +30,6 @@ class Employees with ChangeNotifier {
         url,
         body: json.encode(
           {
-            // "id": datetimeNow.toString(),
             "name": name,
             "position": position,
             "imageUrl": image,
@@ -70,7 +69,6 @@ class Employees with ChangeNotifier {
         url,
         body: json.encode(
           {
-            // "id": datetimeNow.toString(),
             "name": name,
             "position": position,
             "imageUrl": image,
