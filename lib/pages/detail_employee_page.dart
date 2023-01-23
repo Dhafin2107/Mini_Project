@@ -38,7 +38,7 @@ class DetailEmployee extends StatelessWidget {
                     color: Colors.blue,
                     image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: NetworkImage(imageController.text),
+                      image: NetworkImage("https://www.uclg-planning.org/sites/default/files/styles/featured_home_left/public/no-user-image-square.jpg?itok=PANMBJF-"),
                     ),
                   ),
                 ),
@@ -56,28 +56,28 @@ class DetailEmployee extends StatelessWidget {
                 textInputAction: TextInputAction.next,
                 controller: positionController,
               ),
-              TextFormField(
-                autocorrect: false,
-                decoration: InputDecoration(labelText: "Image URL"),
-                textInputAction: TextInputAction.done,
-                controller: imageController,
-                onEditingComplete: () {
-                  employee.editEmployee(
-                    employeeId,
-                    nameController.text,
-                    positionController.text,
-                    imageController.text,
-                  ).then((value) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        content: Text("Berhasil diubah"),
-                        duration: Duration(seconds: 2),
-                      ),
-                    );
-                    Navigator.pop(context);
-                  });
-                },
-              ),
+              // TextFormField(
+              //   autocorrect: false,
+              //   decoration: InputDecoration(labelText: "Image URL"),
+              //   textInputAction: TextInputAction.done,
+              //   controller: imageController,
+              //   onEditingComplete: () {
+              //     employee.editEmployee(
+              //       employeeId,
+              //       nameController.text,
+              //       positionController.text,
+              //       imageController.text,
+              //     ).then((value) {
+              //       ScaffoldMessenger.of(context).showSnackBar(
+              //         SnackBar(
+              //           content: Text("Berhasil diubah"),
+              //           duration: Duration(seconds: 2),
+              //         ),
+              //       );
+              //       Navigator.pop(context);
+              //     });
+              //   },
+              // ),
               SizedBox(height: 50),
               Container(
                 width: double.infinity,

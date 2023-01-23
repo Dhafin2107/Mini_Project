@@ -14,15 +14,9 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 class _HomePageState extends State<HomePage> {
-  // @override
-  // //langsung menjalankan tetapi tidak bisa menggunakan bild contex
-  // void initState() {
-  //   Provider.of<Employees>(context).initialData();
-  //   super.initState();
-  // }
+
 
   @override
-  //langsung jalan pada saat restart
   bool isInit = true;
   void didChangeDependencies() {
     if(isInit){
@@ -90,23 +84,23 @@ class _HomePageState extends State<HomePage> {
                       arguments: id,
                     );
                   },
-                  // leading: CircleAvatar(
-                  //   backgroundImage: NetworkImage(
-                  //     allEmployeeProvider.allEmployee[index].imageUrl,
-                  //   ),
-                  // ),
-                  leading: ClipRRect(
-                    borderRadius: BorderRadius.circular(50),
-                    child: Container(
-                      width: 50,
-                      height: 50,
-                      child: CachedNetworkImage(
-                        imageUrl: allEmployeeProvider.allEmployee[index].imageUrl,
-                        placeholder: (context, url) => CircularProgressIndicator(),
-                        errorWidget: (context, url, error) => Icon(Icons.error),
-                      ),
+                  leading: CircleAvatar(
+                    backgroundImage: NetworkImage(
+                      "https://www.uclg-planning.org/sites/default/files/styles/featured_home_left/public/no-user-image-square.jpg?itok=PANMBJF-"
                     ),
                   ),
+                  // leading: ClipRRect(
+                  //   borderRadius: BorderRadius.circular(50),
+                  //   child: Container(
+                  //     width: 50,
+                  //     height: 50,
+                  //     child: CachedNetworkImage(
+                  //       imageUrl: allEmployeeProvider.allEmployee[index].imageUrl,
+                  //       placeholder: (context, url) => CircularProgressIndicator(),
+                  //       errorWidget: (context, url, error) => Icon(Icons.error),
+                  //     ),
+                  //   ),
+                  // ),
 
                   title: Text(
                     allEmployeeProvider.allEmployee[index].name,

@@ -76,13 +76,13 @@ class AddEmployee extends StatelessWidget {
                 textInputAction: TextInputAction.next,
                 controller: positionController,
               ),
-              TextFormField(
-                autocorrect: false,
-                decoration: const InputDecoration(labelText: "Image URL"),
-                textInputAction: TextInputAction.done,
-                controller: imageController,
-                onEditingComplete: addEmployees,
-              ),
+              // TextFormField(
+              //   autocorrect: false,
+              //   decoration: const InputDecoration(labelText: "Image URL"),
+              //   textInputAction: TextInputAction.done,
+              //   controller: imageController,
+              //   onEditingComplete: addEmployees,
+              // ),
               const SizedBox(height: 50),
               Container(
                 width: double.infinity,
